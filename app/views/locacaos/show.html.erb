@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+<div class="col-xs-5">
+
+<p class="form-control">
+  <strong>Cliente:</strong>
+  <%= @locacao.cliente.nome %>
+</p>
+
+<p class="form-control">
+  <strong>Veiculo:</strong>
+  <%= @locacao.veiculo.modelo %>
+</p>
+
+<p class="form-control">
+  <strong>Datasaida:</strong>
+  <%= @locacao.dataSaida %>
+</p>
+
+<p class="form-control">
+  <strong>Dataentrada:</strong>
+  <%= @locacao.dataEntrada %>
+</p>
+
+<p class="form-control">
+  <strong>PrecoDiaria:</strong>
+  <%= @locacao.calculaLocacao %>
+</p>
+</div>
+
+<div class="col-xs-5">
+  <div class="field">
+  <%= link_to 'Editar Locação', edit_locacao_path(@locacao), class: 'form-control' %>
+  </div>
+
+  <div class="field">
+<%= link_to 'Voltar', locacaos_path, class: 'form-control' %>
+  </div>
+</div>

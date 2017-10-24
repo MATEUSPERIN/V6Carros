@@ -1,0 +1,11 @@
+<h1>Editar Veiculo</h1>
+
+<%= render 'form', veiculo: @veiculo %>
+<div class="col-xs-5">
+  <div class="field">
+<%= link_to 'Verificar', @veiculo, class: 'form-control' %>
+  </div>
+  <div class="field">
+<%= link_to 'Voltar', veiculos_path, class: 'form-control' %>
+  </div>
+</div>

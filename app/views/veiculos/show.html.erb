@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<div class="col-xs-5">
+
+<p class="form-control">
+  <strong>Marca:</strong>
+  <%= @veiculo.marca %>
+</p>
+
+<p class="form-control">
+  <strong>Modelo:</strong>
+  <%= @veiculo.modelo %>
+</p>
+
+<p class="form-control">
+  <strong>Ano:</strong>
+  <%= @veiculo.ano %>
+</p>
+
+<p class="form-control">
+  <strong>Km:</strong>
+  <%= @veiculo.km %>
+</p>
+
+<p class="form-control">
+  <strong>Placa:</strong>
+  <%= @veiculo.placa %>
+</p>
+
+<p class="form-control">
+  <strong>Precodiaria:</strong>
+  <%= @veiculo.precoDiaria %>
+</p>
+</div>
+
+<div class="col-xs-5">
+  <div class="field">
+<%= link_to 'Editar', edit_veiculo_path(@veiculo), class: 'form-control' %>
+  </div>
+  <div class="field">
+<%= link_to 'Voltar', veiculos_path, class: 'form-control' %>
+  </div>
+</div>

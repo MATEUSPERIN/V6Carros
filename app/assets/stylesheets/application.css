@@ -1,0 +1,51 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.botao{
+    margin-bottom: 10px;
+}
+
+
+         .panel-color >.panel-heading{
+    background-color:#18bc9c ;
+    color:white;
+}
+.shadow{
+    -webkit-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    border-left: 10px solid #19c;
+    border-right: 10px solid #18bc9c;
+
+    overflow:hidden;
+}
+
+.btn-color1{
+    background-color:#245;
+    color:white;
+}
+
+.btn-color1:hover{
+    background-color:white;
+    color:#18bc9c;
+    border: 1px solid #18bc9c;
+}
+.input-group-addon {background:#18bc9c;
+    color: white;
+}
+.color{
+    color:#18bc9c;
+}

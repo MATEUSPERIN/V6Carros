@@ -1,0 +1,73 @@
+<%= form_with(model: cliente, local: true) do |form| %>
+  <% if cliente.errors.any? %>
+    <div class="nav nav-pills nav-stacked" id="error_explanation">
+      <h2><%= pluralize(cliente.errors.count, "error") %> prohibited this cliente from being saved:</h2>
+
+      <ul>
+      <% cliente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="col-xs-8">
+  <div class="field">
+    <%= form.label :motorista_id %>
+    <%= collection_select :cliente, :motorista_id, @motoristas, :id, :nome, { prompt: true }, { class: "form-control botao" } %>
+    <%= @clienteADD%>
+    <%= link_to 'Novo Motorista', new_motorista_path, class: 'form-control'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :cliente_nome, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpfCnpj %>
+    <%= form.text_field :cpfCnpj, id: :cliente_cpfCnpj, class: 'form-control'%>
+  </div>
+
+  <div class="field">
+    <%= form.label :dataNascimento %>
+    <%= form.text_field :dataNascimento, id: :cliente_dataNascimento, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rua %>
+    <%= form.text_field :rua, id: :cliente_rua, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cidade %>
+    <%= form.text_field :cidade, id: :cliente_cidade, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cep %>
+    <%= form.text_field :cep, id: :cliente_cep, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :uf %>
+    <%= form.text_field :uf, id: :cliente_uf, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefone %>
+    <%= form.text_field :telefone, id: :cliente_telefone, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :cliente_email, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'form-control'%>
+  </div>
+  <div class="field">
+    <%= link_to 'Voltar', clientes_path, class: 'form-control' %>
+  </div>
+</div>
+<% end %>

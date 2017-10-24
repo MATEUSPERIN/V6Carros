@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<div class="col-xs-5">
+
+<p class="form-control">
+  <strong>Nome:</strong>
+  <%= @motorista.nome%>
+</p>
+
+<p class="form-control">
+  <strong>Cpf:</strong>
+  <%= @motorista.cpf %>
+</p>
+
+<p class="form-control">
+  <strong>Cnh:</strong>
+  <%= @motorista.cnh%>
+</p>
+
+</div>
+<br>
+
+<div class="col-xs-5">
+  <div class="field">
+<%= link_to 'Editar', edit_motorista_path(@motorista), class: 'form-control' %>
+  </div>
+  <div class="field">
+<%= link_to 'Voltar', motoristas_path, class: 'form-control' %>
+  </div>
+</div>

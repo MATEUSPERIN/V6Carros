@@ -1,0 +1,13 @@
+<center>
+<div class="container-fluid">
+   <div class="col-xs-12">
+      <div class="form-group busca_formulario">
+        <%= form_tag(relatorio_path, method: :get, class: 'form-inline') do %>
+          <label>Data da Locação</label>
+          <%= date_field_tag 'search', @date_to_search, class: 'form-control' %>
+          <%= submit_tag 'Buscar', class: 'btn btn-default' %>
+        <% end %>
+        </div>
+    </div>
+</center>
+

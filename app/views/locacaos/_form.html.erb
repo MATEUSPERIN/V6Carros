@@ -1,0 +1,38 @@
+<%= form_with(model: locacao, local: true) do |form| %>
+  <% if locacao.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(locacao.errors.count, "error") %> prohibited this locacao from being saved:</h2>
+
+      <ul>
+      <% locacao.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="col-xs-5">
+  <div class="field">
+    <%= form.label :cliente_id %>
+    <%= collection_select :locacao, :cliente_id, @clientes, :id, :nome, { prompt: true }, { class: "form-control botao" } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :veiculo_id %>
+    <%= collection_select :locacao, :veiculo_id, @veiculos, :id, :modelo, { prompt: true }, { class: "form-control botao" } %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dataSaida %>
+    <%= form.date_field :dataSaida, id: :locacao_dataSaida, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dataEntrada %>
+    <%= form.date_field :dataEntrada, id: :locacao_dataEntrada, class: 'form-control' %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'form-control' %>
+  </div>
+</div>
+<% end %>

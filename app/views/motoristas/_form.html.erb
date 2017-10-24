@@ -1,0 +1,33 @@
+<%= form_with(model: motorista, local: true) do |form| %>
+  <% if motorista.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(motorista.errors.count, "error") %> prohibited this motorista from being saved:</h2>
+
+      <ul>
+      <% motorista.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class="col-xs-5">
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome, id: :motorista_nome, class: 'form-control'  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf, id: :motorista_cpf, class: 'form-control'  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cnh %>
+    <%= form.text_field :cnh, id: :motorista_cnh, class: 'form-control'  %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: 'form-control'  %>
+  </div>
+</div>
+<% end %>

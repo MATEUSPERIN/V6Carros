@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Locações</h1>
+
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Cliente</th>
+      <th>Veiculo</th>
+      <th>Datasaida</th>
+      <th>Dataentrada</th>
+      <th>Valor da Diaria</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @locacaos.each do |locacao| %>
+      <tr>
+        <td><%= locacao.cliente.nome %></td>
+        <td><%= locacao.veiculo.modelo %></td>
+        <td><%= locacao.dataSaida %></td>
+        <td><%= locacao.dataEntrada %></td>
+        <td><%= locacao.calculaLocacao %></td>
+        <td><%= link_to 'Export', locacaos_export_path(locacao), target: "_blank" %></td>
+        <td><%= link_to 'Show', locacao %></td>
+        <td><%= link_to 'Edit', edit_locacao_path(locacao) %></td>
+        <td><%= link_to 'Destroy', locacao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<%= link_to 'Realizar nova Locacao', new_locacao_path%>
+</div>

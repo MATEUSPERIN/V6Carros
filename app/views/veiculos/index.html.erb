@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Veiculos</h1>
+
+<table class="table table-hover table-bordered">
+  <thead>
+    <tr>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Ano</th>
+      <th>Km</th>
+      <th>Placa</th>
+      <th>Precodiaria</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @veiculos.each do |veiculo| %>
+      <tr>
+        <td><%= veiculo.marca %></td>
+        <td><%= veiculo.modelo %></td>
+        <td><%= veiculo.ano %></td>
+        <td><%= veiculo.km %></td>
+        <td><%= veiculo.placa %></td>
+        <td><%= veiculo.precoDiaria %></td>
+        <td><%= link_to 'Show', veiculo %></td>
+        <td><%= link_to 'Edit', edit_veiculo_path(veiculo) %></td>
+        <td><%= link_to 'Destroy', veiculo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<%= link_to 'Cadastrar novo Veiculo', new_veiculo_path %>
+</div>

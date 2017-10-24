@@ -1,0 +1,62 @@
+<p class="btn-group btn-group-justified" id="notice"><%= notice %></p>
+<div class="col-xs-5">
+
+<p class="form-control">
+  <strong>Nome:</strong>
+  <%= @cliente.nome %>
+</p>
+
+<p class="form-control">
+  <strong>Cpfcnpj:</strong>
+  <%= @cliente.cpfCnpj %>
+</p>
+
+<p class="form-control">
+  <strong>Datanascimento:</strong>
+  <%= @cliente.dataNascimento %>
+</p>
+
+<p class="form-control">
+  <strong>Rua:</strong>
+  <%= @cliente.rua %>
+</p>
+
+<p class="form-control">
+  <strong>Cidade:</strong>
+  <%= @cliente.cidade %>
+</p>
+
+<p class="form-control">
+  <strong>Cep:</strong>
+  <%= @cliente.cep %>
+</p>
+
+<p class="form-control">
+  <strong>Uf:</strong>
+  <%= @cliente.uf %>
+</p>
+
+<p class="form-control">
+  <strong>Telefone:</strong>
+  <%= @cliente.telefone %>
+</p>
+
+<p class="form-control">
+  <strong>Email:</strong>
+  <%= @cliente.email %>
+</p>
+
+<p class="form-control">
+  <strong>Motorista:</strong>
+  <%= @cliente.motorista.nome %>
+</p>
+</div>
+
+<div class="col-xs-5">
+  <div class="field">
+<%= link_to 'Editar', edit_cliente_path(@cliente), class: 'form-control' %>
+  </div>
+    <div class="field">
+<%= link_to 'Voltar', clientes_path, class: 'form-control' %>
+  </div>
+</div>

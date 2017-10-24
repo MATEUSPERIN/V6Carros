@@ -1,0 +1,11 @@
+<h1>Editar Motorista</h1>
+
+<%= render 'form', motorista: @motorista %>
+<div class="col-xs-5">
+  <div class="field">
+<%= link_to 'Verificar', @motorista, class: 'form-control'  %>
+  </div>
+  <div class="field">
+<%= link_to 'Voltar', motoristas_path, class: 'form-control'  %>
+  </div>
+</div>
