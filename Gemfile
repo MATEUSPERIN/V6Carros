@@ -50,8 +50,7 @@ end
 
 group :development do
   # catches mail
-  gem 'mailcatcher', '~> 0.2.4'
-  gem  'thin', '~> 1.6.2'
+  gem 'mailcatcher'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
 end

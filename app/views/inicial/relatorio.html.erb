@@ -2,11 +2,13 @@
 <div class="container-fluid">
    <div class="col-xs-12">
       <div class="form-group busca_formulario">
-        <%= form_tag(relatorio_path, method: :get, class: 'form-inline') do %>
           <label>Data da Locação</label>
-          <%= date_field_tag 'search', @date_to_search, class: 'form-control' %>
-          <%= submit_tag 'Buscar', class: 'btn btn-default' %>
-        <% end %>
+              <%= form_tag busca_veiculo_path, method: :get, class: "navbar-form navbar-rigth" do %>
+                <div class="form-group">
+                  <%= date_field_tag :dataSaida, @veiculo_a_buscar, class: 'form-control' %>
+                  <%= button_to "Buscar", nil, class: "btn btn-default" %>
+                </div>
+          <% end %>
         </div>
     </div>
 </center>

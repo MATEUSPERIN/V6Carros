@@ -35,7 +35,20 @@ def validacao2
     end
 end
 def validacao3
+  locacaos = Locacao.where('veiculo_id = ?', self.veiculo.id)
+  a = (self.dataEntrada - self.dataSaida).to_i
+  if a > 0
+    if not locacaos.blank?
+       errors.add(:dataSaida, " - Este veiculo já está locado para esse dia")
+       errors.add(:dataSaida, " - Este veiculo já está locado para esse dia")
 
+    end
+  end
+  if a < 0
+    if not locacaos.blank?
+       errors.add(:dataEntrada, " - Data anterior a data de saida do veiculo")
+    end
+  end
 end
 
   def calculaLocacao

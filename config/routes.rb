@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get "/clientes/busca" => "clientes#busca", as: :busca_cliente
+  get "/inicial/busca" => "inicial#busca", as: :busca_veiculo
   get '/relatorio' => 'inicial#relatorio', as: :relatorio
   get '/veiculoEmprestado' => 'inicial#veiculoEmprestado', as: :veiculoEmprestado
   resources :motoristas

@@ -9,10 +9,11 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-#mailCatchrer
+$stdout.sync = true
+
+#mailCatchrer/
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
-  config.action_mailer.raise_delivery_errors = false
 
   # Show full error reports.
   config.consider_all_requests_local = true
